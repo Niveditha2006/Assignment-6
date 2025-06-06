@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverable Sidenav Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0; /* Light background similar to the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Center content vertically */
+            padding: 20px;
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+
+        .container {
+            width: 80%; /* Adjust width as needed */
+            max-width: 900px; /* Max width for content area */
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex; /* Use flexbox for sidenav and content */
+            min-height: 400px; /* Minimum height for the container */
+        }
+
+        /* Sidenav Styles */
+        .sidenav {
+            width: 60px; /* Initial narrow width for the sidenav */
+            background-color: white; /* Sidenav background */
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            padding-top: 20px; /* Space from top */
+            transition: width 0.3s ease; /* Smooth transition for width change */
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05); /* Subtle shadow on the right */
+        }
+
+        .sidenav:hover {
+            width: 200px; /* Expanded width on hover */
+        }
+
+        .sidenav-button {
+            display: block;
+            height: 50px; /* Height of each button */
+            margin-bottom: 10px; /* Space between buttons */
+            color: white;
+            text-align: center;
+            line-height: 50px; /* Center text vertically */
+            text-decoration: none;
+            font-size: 1.1em;
+            overflow: hidden; /* Hide text initially */
+            white-space: nowrap; /* Prevent text wrapping */
+            transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+            border-radius: 5px; /* Slightly rounded corners */
+            box-sizing: border-box;
+            width: 50px; /* Initial square button width */
+            margin-left: 5px; /* Slight margin from left edge */
+        }
+
+        /* Colors for buttons */
+        .sidenav-button.green { background-color: #4CAF50; }
+        .sidenav-button.blue { background-color: #2196F3; }
+        .sidenav-button.red { background-color: #f44336; }
+        .sidenav-button.dark-gray { background-color: #607d8b; } /* Dark gray/blue-gray */
+
+
+        .sidenav:hover .sidenav-button {
+            width: calc(100% - 10px); /* Fill the expanded sidenav width (minus padding) */
+            padding-left: 10px; /* Add some padding for text */
+            text-align: left; /* Align text to the left */
+        }
+
+        .sidenav-button:hover {
+            background-color: #555; /* Darker hover effect */
+        }
+
+        /* Content Area Styles */
+        .main-content {
+            flex-grow: 1; /* Takes up remaining space */
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .main-content h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .main-content p {
+            font-size: 1em;
+            line-height: 1.5;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidenav">
+            <a href="#" class="sidenav-button green">Home</a>
+            <a href="#" class="sidenav-button blue">Services</a>
+            <a href="#" class="sidenav-button red">About</a>
+            <a href="#" class="sidenav-button dark-gray">Contact</a>
+        </div>
+
+        <div class="main-content">
+            <h2>Hoverable Sidenav Buttons</h2>
+            <p>Hover over the buttons in the left side navigation to open them.</p>
+            </div>
+    </div>
+</body>
+</html>

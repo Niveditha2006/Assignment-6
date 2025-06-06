@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Window</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Make sure the form is centered vertically on the screen */
+            background-color: #333; /* Dark background to mimic the blurred desk */
+            /* You could add a background image here if you have one */
+            /* background-image: url('path/to/your/blurred-bg.jpg'); */
+            /* background-size: cover; */
+            /* background-position: center; */
+        }
+
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 350px; /* Fixed width for the form */
+            color: white;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #eee;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left; /* Align labels/inputs to the left within their group */
+        }
+
+        .input-group label {
+            display: block; /* Make label take full width */
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        .input-group input[type="email"],
+        .input-group input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333; /* Darker input background */
+            color: white;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        .input-group input[type="email"]::placeholder,
+        .input-group input[type="password"]::placeholder {
+            color: #aaa;
+        }
+
+        .terms-checkbox {
+            display: flex; /* Use flex to align checkbox and text */
+            align-items: center;
+            margin-bottom: 25px;
+            justify-content: center; /* Center the checkbox text */
+        }
+
+        .terms-checkbox input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.1); /* Slightly larger checkbox */
+        }
+
+        .terms-checkbox label {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        .terms-checkbox label a {
+            color: #ffcc00; /* Yellowish link color for "Term & Condition" */
+            text-decoration: none;
+        }
+
+        .terms-checkbox label a:hover {
+            text-decoration: underline;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff9900; /* Orange button color */
+            border: none;
+            border-radius: 5px;
+            color: black; /* Black text on orange button */
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #ffb347; /* Lighter orange on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>LOGIN WINDOW</h2>
+        <form>
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Your Email Address">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Your Password">
+            </div>
+            <div class="terms-checkbox">
+                <input type="checkbox" id="agreeTerms" name="agreeTerms">
+                <label for="agreeTerms">Agree With <a href="#">Term & Condition</a></label>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+</body>
+</html>
