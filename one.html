@@ -8,78 +8,73 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f0f0f0; /* Light background similar to the image */
+            background-color: #f0f0f0; 
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Center content vertically */
+            min-height: 100vh; 
             padding: 20px;
-            box-sizing: border-box; /* Include padding in element's total width and height */
+            box-sizing: border-box; 
         }
 
         .container {
-            width: 80%; /* Adjust width as needed */
-            max-width: 900px; /* Max width for content area */
+            width: 80%; 
+            max-width: 900px; 
             background-color: white;
             border: 1px solid #ccc;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            display: flex; /* Use flexbox for sidenav and content */
-            min-height: 400px; /* Minimum height for the container */
+            display: flex; 
+            min-height: 400px; 
         }
-
-        /* Sidenav Styles */
         .sidenav {
-            width: 60px; /* Initial narrow width for the sidenav */
-            background-color: white; /* Sidenav background */
+            width: 60px; 
+            background-color: white; 
             display: flex;
-            flex-direction: column; /* Stack buttons vertically */
-            padding-top: 20px; /* Space from top */
-            transition: width 0.3s ease; /* Smooth transition for width change */
-            box-shadow: 2px 0 5px rgba(0,0,0,0.05); /* Subtle shadow on the right */
+            flex-direction: column; 
+            padding-top: 20px; 
+            transition: width 0.3s ease; 
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05); 
         }
 
         .sidenav:hover {
-            width: 200px; /* Expanded width on hover */
+            width: 200px; 
         }
 
         .sidenav-button {
             display: block;
-            height: 50px; /* Height of each button */
-            margin-bottom: 10px; /* Space between buttons */
+            height: 50px; 
+            margin-bottom: 10px; 
             color: white;
             text-align: center;
-            line-height: 50px; /* Center text vertically */
+            line-height: 50px; 
             text-decoration: none;
             font-size: 1.1em;
-            overflow: hidden; /* Hide text initially */
-            white-space: nowrap; /* Prevent text wrapping */
-            transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
-            border-radius: 5px; /* Slightly rounded corners */
+            overflow: hidden; 
+            white-space: nowrap; 
+            transition: width 0.3s ease, background-color 0.3s ease; 
+            border-radius: 5px;
             box-sizing: border-box;
-            width: 50px; /* Initial square button width */
-            margin-left: 5px; /* Slight margin from left edge */
+            width: 50px; 
+            margin-left: 5px; 
         }
 
-        /* Colors for buttons */
         .sidenav-button.green { background-color: #4CAF50; }
         .sidenav-button.blue { background-color: #2196F3; }
         .sidenav-button.red { background-color: #f44336; }
-        .sidenav-button.dark-gray { background-color: #607d8b; } /* Dark gray/blue-gray */
+        .sidenav-button.dark-gray { background-color: #607d8b; } 
 
 
         .sidenav:hover .sidenav-button {
-            width: calc(100% - 10px); /* Fill the expanded sidenav width (minus padding) */
-            padding-left: 10px; /* Add some padding for text */
-            text-align: left; /* Align text to the left */
+            width: calc(100% - 10px); 
+            padding-left: 10px; 
+            text-align: left; 
         }
 
         .sidenav-button:hover {
-            background-color: #555; /* Darker hover effect */
+            background-color: #555;
         }
-
-        /* Content Area Styles */
         .main-content {
-            flex-grow: 1; /* Takes up remaining space */
+            flex-grow: 1; 
             padding: 20px;
             background-color: #fff;
         }
